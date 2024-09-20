@@ -8,19 +8,19 @@ from main import (
 
 
 def save_profiler_report(
-    profiler_pl, profiler_pd, output_file="profiler_comparison_report.md"
+    profiler_pl1, profiler_pd1, output_file="profiler_comparison_report.md"
 ):
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("# Profiler Comparison Report\n\n")
 
         f.write("## Polars Profiler Output\n\n")
         f.write("```\n")
-        f.write(profiler_pl)
+        f.write(profiler_pl1)
         f.write("\n```\n\n")
 
         f.write("## Pandas Profiler Output\n\n")
         f.write("```\n")
-        f.write(profiler_pd)
+        f.write(profiler_pd1)
         f.write("\n```\n")
 
     print(f"Profiler comparison report saved to {output_file}")
